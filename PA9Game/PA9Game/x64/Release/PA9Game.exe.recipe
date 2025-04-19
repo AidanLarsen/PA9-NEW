@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\x64\Debug\PA9Game.exe</FullPath>
+      <FullPath>C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\x64\Release\PA9Game.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
