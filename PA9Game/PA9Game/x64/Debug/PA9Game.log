@@ -1,11 +1,9 @@
 ﻿  main.cpp
-C:\Users\troym\Desktop\temp\PA9-NEW\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
   (compiling source file 'main.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
-      C:\Users\troym\Desktop\temp\PA9-NEW\include\SFML\System\Exception.hpp(41,23):
+      C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-  PA9Game.vcxproj -> C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\x64\Debug\PA9Game.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+  PA9Game.vcxproj -> C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\x64\Debug\PA9Game.exe
