@@ -5,7 +5,7 @@ int main()
 {
     
 
-    sf::RenderWindow window (sf::VideoMode({ 1000, 800}), "SFML works!");
+    sf::RenderWindow window (sf::VideoMode({1000, 800}), "SFML works!");
 
     const std::string character = "Sprite.png";
   
