@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include "Object.hpp"
 #include "Entity.hpp"
 
 int main()
