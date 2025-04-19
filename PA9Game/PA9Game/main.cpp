@@ -1,10 +1,15 @@
 #include <SFML/Graphics.hpp>
+#include "Entity.hpp"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode({ 200, 200 }), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    
+
+    sf::RenderWindow window (sf::VideoMode({ 256, 420}), "SFML works!");
+
+    const std::string character = "Sprite.png";
+  
+    Entity test(character);
 
     while (window.isOpen())
     {
@@ -14,8 +19,11 @@ int main()
                 window.close();
         }
 
+        
         window.clear();
-        window.draw(shape);
+        test.setScale(0.2, 0.2);
+        test.drawEntity(window);
         window.display();
+
     }
 }
