@@ -6,6 +6,8 @@ C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\include\SFML\System\Exception.h
       C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\PA9Game\main.cpp(24,28): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\PA9Game\main.cpp(24,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\PA9Game\main.cpp(32,33): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\PA9Game\main.cpp(32,28): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\PA9Game\main.cpp(34,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\PA9Game\main.cpp(34,29): warning C4305: 'argument': truncation from 'double' to 'float'
   PA9Game.vcxproj -> C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\x64\Debug\PA9Game.exe
