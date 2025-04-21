@@ -21,6 +21,12 @@
     <ClInclude Include="Entity.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Backdrop.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Prop.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -29,9 +35,18 @@
     <ClCompile Include="Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Backdrop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Sprite.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Backdrop.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Backdrop1.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
