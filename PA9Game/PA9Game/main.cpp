@@ -1,8 +1,10 @@
+#pragma once
 #include <SFML/Graphics.hpp>
 #include "Object.hpp"
 #include "Entity.hpp"
 #include "Backdrop.hpp"
 #include "Player.hpp"
+#include "Animation.hpp"
 
 
 int main()
