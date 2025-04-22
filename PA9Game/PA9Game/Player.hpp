@@ -7,8 +7,8 @@ class Player : public Entity
 {
 public:
 	Player() = default;
-	explicit Player(const std::string imgDirectory)
-		: Entity(imgDirectory), velocityY(0.0f), jumping(false)
+	explicit Player(const std::string imgDirectory, float x, float y)
+		: Entity(imgDirectory, x, y), velocityY(0.0f), jumping(false)
 	{
 
 	}

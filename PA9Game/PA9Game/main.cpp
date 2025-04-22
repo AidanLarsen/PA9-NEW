@@ -5,7 +5,8 @@
 #include "Backdrop.hpp"
 #include "Player.hpp"
 #include "Animation.hpp"
-
+#include "GroundEnemy.hpp"
+#include "FlyingEnemy.hpp"
 
 int main()
 {
@@ -15,7 +16,12 @@ int main()
     sf::RenderWindow window(sf::VideoMode({ 1536u, 1024u }), "SFML works!");
 
     const std::string character = "Sprite.png";
+    const std::string character2 = "Lebron.png";
     Backdrop backdrop("Backdrop1.png", "Ground.png");
+
+    GroundEnemy testEnemy(character, 100, 100, 500);
+
+    FlyingEnemy testEnemy2(character2, 500, 500, 500);
 
     std::vector<GameObject> platforms;
     platforms.emplace_back(sf::Vector2f(1000, 40), sf::Vector2f(0, 760), sf::Color::Green);
@@ -25,7 +31,7 @@ int main()
     sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 525), sf::Color::Red);
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(-1, 0), sf::Color::Green);
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(1000, 0), sf::Color::Green);
-    Player player(character);
+    Player player(character, 250, 250);
 
     // checks if jump was initiated previously
     bool prevJump = false;
@@ -117,7 +123,17 @@ int main()
             window.draw(sideCol.shape);
         }
 
-       
+        testEnemy.setScale(0.2, 0.2);
+
+        testEnemy2.setScale(0.9, 0.9);
+
+        testEnemy.update();
+
+        testEnemy2.update();
+
+        testEnemy.drawEntity(window);
+
+        testEnemy2.drawEntity(window);
         player.drawEntity(window);
         window.display();
 

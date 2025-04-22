@@ -138,6 +138,8 @@
     <ClInclude Include="Animation.hpp" />
     <ClInclude Include="Backdrop.hpp" />
     <ClInclude Include="Entity.hpp" />
+    <ClInclude Include="FlyingEnemy.hpp" />
+    <ClInclude Include="GroundEnemy.hpp" />
     <ClInclude Include="Object.hpp" />
     <ClInclude Include="Prop.hpp" />
     <ClInclude Include="Player.hpp" />
@@ -146,6 +148,8 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Backdrop.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="FlyingEnemy.cpp" />
+    <ClCompile Include="GroundEnemy.cpp" />
     <ClCompile Include="main.cpp">
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\githeader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>

@@ -1,0 +1,16 @@
+#include "GroundEnemy.hpp"
+
+void GroundEnemy::update() {
+
+    if (!pSprite.has_value()) {
+        return;
+    }
+
+    sf::Vector2f currentPos = pSprite->getPosition();
+
+    if (currentPos.x >= rightBound) velocity.x = -.02f;
+
+    if (currentPos.x <= leftBound)  velocity.x = .02f;
+
+    pSprite->move(velocity);
+}
