@@ -2,7 +2,6 @@
 #include "Object.hpp"
 #include "Entity.hpp"
 #include "Backdrop.hpp"
-=======
 #include "Player.hpp"
 
 
@@ -22,7 +21,7 @@ int main()
   
     std::vector<GameObject> sideColPlatforms;
     sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 525), sf::Color::Red);
-    sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(0, 0), sf::Color::Green);
+    sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(-1, 0), sf::Color::Green);
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(1000, 0), sf::Color::Green);
     Player player(character);
 
