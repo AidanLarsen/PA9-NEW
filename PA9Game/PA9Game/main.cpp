@@ -1,7 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include "Object.hpp"
+#include "Entity.hpp"
+#include "Backdrop.hpp"
+=======
 #include "Player.hpp"
-
 
 
 int main()
@@ -9,9 +11,10 @@ int main()
     
     float initial = 0.0f;
 
-    sf::RenderWindow window (sf::VideoMode({ 1000, 800}), "SFML works!");
+    sf::RenderWindow window (sf::VideoMode({ 1536u, 1024u}), "SFML works!");
 
     const std::string character = "Sprite.png";
+    Backdrop test1("Backdrop1.png", "Ground.png");
 
     std::vector<GameObject> platforms;
     platforms.emplace_back(sf::Vector2f( 1000, 40 ), sf::Vector2f(0, 760 ), sf::Color::Green);
@@ -25,6 +28,7 @@ int main()
 
     // checks if jump was initiated previously
     bool prevJump = false;
+
 
     while (window.isOpen())
     {
