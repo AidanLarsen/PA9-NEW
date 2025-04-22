@@ -3,6 +3,41 @@
 
 
 
+void Player::checkLeftCol(std::vector<GameObject> objects)
+{
+	for (const auto& object : objects)
+	{
+		if (pSprite->getGlobalBounds().findIntersection(object.shape.getGlobalBounds()))
+		{
+			pSprite->move({ 0.1, 0 });
+		}
+	}
+}
+
+void Player::checkRightCol(std::vector<GameObject> objects)
+{
+	for (const auto& object : objects)
+	{
+		if (pSprite->getGlobalBounds().findIntersection(object.shape.getGlobalBounds()))
+		{
+			pSprite->move({ -0.1, 0 });
+		}
+	}
+}
+
+bool Player::checkTopCol(std::vector<GameObject> objects)
+{
+	bool collided = false;
+	for (const auto& object : objects)
+	{
+		if (pSprite->getGlobalBounds().findIntersection(object.shape.getGlobalBounds()))
+		{
+			collided = true;
+		}
+	}
+	return collided;
+}
+
 void Player::checkGravity(std::vector<GameObject> objects)
 {
 
@@ -33,7 +68,12 @@ void Player::moveRight()
 
 void Player::moveLeft()
 {
-	pSprite->move({ -.1, 0 });
+	pSprite->move({ -0.1, 0 });
+}
+
+void Player::moveDown()
+{
+	pSprite->move({ 0, .1 });
 }
 
 

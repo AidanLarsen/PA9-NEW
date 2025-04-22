@@ -42,10 +42,13 @@ public:
 	}
 
 	
-
+	void checkLeftCol(std::vector<GameObject> objects);
+	void checkRightCol(std::vector<GameObject> objects);
+	bool checkTopCol(std::vector<GameObject> objects);
 	void checkGravity(std::vector<GameObject> objects);
 	void moveRight();
 	void moveLeft();
+	void moveDown();
 	void jump();
 	//void jump();
 

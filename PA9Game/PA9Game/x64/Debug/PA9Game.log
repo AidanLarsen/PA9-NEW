@@ -6,6 +6,6 @@ C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA
       C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(91,30): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(91,25): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(100,30): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(100,25): warning C4305: 'argument': truncation from 'double' to 'float'
   PA9Game.vcxproj -> C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\x64\Debug\PA9Game.exe

@@ -17,9 +17,11 @@ int main()
     platforms.emplace_back(sf::Vector2f( 1000, 40 ), sf::Vector2f(0, 760 ), sf::Color::Green);
     platforms.emplace_back(sf::Vector2f(120, 50), sf::Vector2f(300, 620), sf::Color::Green);
   
+    std::vector<GameObject> sideColPlatforms;
+    sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 625), sf::Color::Green);
     Player player(character);
 
-    // checks if jump was intitiated previously
+    // checks if jump was initiated previously
     bool prevJump = false;
 
     while (window.isOpen())
@@ -70,12 +72,17 @@ int main()
             player.setJumping(false);
         }
 
+        if (player.checkTopCol(sideColPlatforms))
+        {
+            player.moveDown();
+            player.setJumping(false);
+        }
 
         // left movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
         {
             player.moveRight();
-
+            player.checkRightCol(sideColPlatforms);
         }
 
         
@@ -84,6 +91,7 @@ int main()
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
         {
             player.moveLeft();
+            player.checkLeftCol(sideColPlatforms);
 
         }
 
@@ -93,6 +101,10 @@ int main()
         for (const auto& platform : platforms)
         {
             window.draw(platform.shape);
+        }
+        for (const auto& sideCol : sideColPlatforms)
+        {
+            window.draw(sideCol.shape);
         }
         player.drawEntity(window);
         window.display();
