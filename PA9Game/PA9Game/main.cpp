@@ -7,18 +7,18 @@
 
 int main()
 {
-    
+
     float initial = 0.0f;
 
-    sf::RenderWindow window (sf::VideoMode({ 1536u, 1024u}), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode({ 1536u, 1024u }), "SFML works!");
 
     const std::string character = "Sprite.png";
-    Backdrop test1("Backdrop1.png", "Ground.png");
+    Backdrop backdrop("Backdrop1.png", "Ground.png");
 
     std::vector<GameObject> platforms;
-    platforms.emplace_back(sf::Vector2f( 1000, 40 ), sf::Vector2f(0, 760 ), sf::Color::Green);
+    platforms.emplace_back(sf::Vector2f(1000, 40), sf::Vector2f(0, 760), sf::Color::Green);
     platforms.emplace_back(sf::Vector2f(120, 50), sf::Vector2f(300, 520), sf::Color::Green);
-  
+
     std::vector<GameObject> sideColPlatforms;
     sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 525), sf::Color::Red);
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(-1, 0), sf::Color::Green);
@@ -41,8 +41,8 @@ int main()
         {
             player.checkGravity(platforms);
         }
-        
-        
+
+
         // this ensures that only one jump is preformed even if the user holds down the space bar
         bool jumpNow = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space);
 
@@ -60,7 +60,7 @@ int main()
         if (player.isJumping())
         {
             player.jump();
-           
+
         }
 
 
@@ -78,7 +78,7 @@ int main()
             player.setJumping(false);
         }
 
-        
+
 
         // left movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
@@ -87,7 +87,7 @@ int main()
             player.checkRightCol(sideColPlatforms);
         }
 
-        
+
 
         // right movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
@@ -113,6 +113,8 @@ int main()
         {
             window.draw(sideCol.shape);
         }
+
+        backdrop.drawBackdrop(window);
         player.drawEntity(window);
         window.display();
 
