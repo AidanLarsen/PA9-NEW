@@ -41,3 +41,17 @@ void Entity::setScale(float x, float y)
 	}
 }
 
+sf::IntRect* Entity::getRect()
+{
+	return &rect;
+}
+
+sf::Sprite* Entity::getSprite()
+{
+	return &pSprite.value();
+}
+
+void Entity::updateSprite()
+{
+	pSprite.emplace(pTexture, rect);
+}
