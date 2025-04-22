@@ -106,6 +106,7 @@ int main()
         }
 
         window.clear();
+        backdrop.drawBackdrop(window);
         player.setScale(0.2, 0.2);
         for (const auto& platform : platforms)
         {
@@ -116,7 +117,7 @@ int main()
             window.draw(sideCol.shape);
         }
 
-        backdrop.drawBackdrop(window);
+       
         player.drawEntity(window);
         window.display();
 
