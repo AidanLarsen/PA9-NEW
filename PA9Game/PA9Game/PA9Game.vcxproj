@@ -139,6 +139,7 @@
     <ClInclude Include="Entity.hpp" />
     <ClInclude Include="Object.hpp" />
     <ClInclude Include="Prop.hpp" />
+    <ClInclude Include="Player.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Backdrop.cpp" />
@@ -149,6 +150,7 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\githeader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
     </ClCompile>
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Backdrop.png" />

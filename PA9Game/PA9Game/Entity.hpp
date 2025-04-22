@@ -1,6 +1,7 @@
+#pragma once
+
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
 
 class Entity {
 public:
@@ -11,7 +12,7 @@ public:
 	void setPosition(float x, float y);
 	void setScale(float x, float y);
 
-private:
+protected:
 
 	sf::Texture pTexture;
 	std::optional<sf::Sprite> pSprite;
