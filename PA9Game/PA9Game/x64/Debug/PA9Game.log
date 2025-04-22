@@ -1,13 +1,39 @@
-﻿  main.cpp
-C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+﻿  Entity.cpp
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'Entity.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  FlyingEnemy.cpp
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'FlyingEnemy.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  GroundEnemy.cpp
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'GroundEnemy.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  Generating Code...
+  main.cpp
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
   (compiling source file 'main.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
-      C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\include\SFML\System\Exception.hpp(41,23):
+      C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\PA9Game\main.cpp(32,33): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\PA9Game\main.cpp(32,28): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\PA9Game\main.cpp(34,34): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\PA9Game\main.cpp(34,29): warning C4305: 'argument': truncation from 'double' to 'float'
-  PA9Game.vcxproj -> C:\Users\jerem\OneDrive\Documents\GitHub\PA9-NEW\PA9Game\x64\Debug\PA9Game.exe
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(40,33): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(40,28): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(42,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(42,29): warning C4305: 'argument': truncation from 'double' to 'float'
+  LINK : C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\x64\Debug\PA9Game.exe not found or not built by the last incremental link; performing full link
+  PA9Game.vcxproj -> C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\x64\Debug\PA9Game.exe

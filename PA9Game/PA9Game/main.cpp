@@ -1,22 +1,20 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-<<<<<<< Updated upstream
+
 #include "Object.hpp"
-=======
+
 #include "GroundEnemy.hpp"
 #include "FlyingEnemy.hpp"
->>>>>>> Stashed changes
+
 #include "Entity.hpp"
 
 int main()
 {
-<<<<<<< Updated upstream
-    
 
-    sf::RenderWindow window (sf::VideoMode({ 256, 420}), "SFML works!");
-=======
+
+
     sf::RenderWindow window (sf::VideoMode({1000, 800}), "SFML works!");
->>>>>>> Stashed changes
+
 
     const std::string character = "Sprite.png";
 
