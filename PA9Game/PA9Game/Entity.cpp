@@ -9,7 +9,7 @@ Entity::Entity(const std::string imgDirectory)
 	}
 	else{
 
-		pSprite.emplace(pTexture);
+		pSprite.emplace(pTexture, rect);
 
 	}
 }
@@ -39,5 +39,20 @@ void Entity::setScale(float x, float y)
 		pSprite->setScale({x, y});
 
 	}
+}
+
+sf::IntRect* Entity::getRect()
+{
+	return &rect;
+}
+
+sf::Sprite* Entity::getSprite()
+{
+	return &pSprite.value();
+}
+
+void Entity::updateSprite()
+{
+	pSprite.emplace(pTexture, rect);
 }
 
