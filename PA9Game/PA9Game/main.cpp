@@ -65,20 +65,20 @@ int main()
 
     std::vector<GameObject> sideColPlatforms;
     // floor 1 platform
-    sideColPlatforms.emplace_back(sf::Vector2f(200, 25), sf::Vector2f(300, 760), sf::Color::Red);
+    sideColPlatforms.emplace_back(sf::Vector2f(200, 25), sf::Vector2f(300, 760), sf::Color::Green);
     //right rising platforms
-    sideColPlatforms.emplace_back(sf::Vector2f(250, 25), sf::Vector2f(1300, 730), sf::Color::Red);
-    sideColPlatforms.emplace_back(sf::Vector2f(125, 25), sf::Vector2f(1100, 630), sf::Color::Red);
+    sideColPlatforms.emplace_back(sf::Vector2f(250, 25), sf::Vector2f(1300, 730), sf::Color::Green);
+    sideColPlatforms.emplace_back(sf::Vector2f(125, 25), sf::Vector2f(1100, 630), sf::Color::Green);
     // second floor
-    sideColPlatforms.emplace_back(sf::Vector2f(1000, 35), sf::Vector2f(0, 530), sf::Color::Red);
+    sideColPlatforms.emplace_back(sf::Vector2f(1000, 35), sf::Vector2f(0, 530), sf::Color::Green);
     // second floor platforms
-    sideColPlatforms.emplace_back(sf::Vector2f(400, 35), sf::Vector2f(500, 380), sf::Color::Red);
+    sideColPlatforms.emplace_back(sf::Vector2f(400, 35), sf::Vector2f(500, 380), sf::Color::Green);
     // second floor rising platforms
-    sideColPlatforms.emplace_back(sf::Vector2f(100, 35), sf::Vector2f(310, 380), sf::Color::Red);
-    sideColPlatforms.emplace_back(sf::Vector2f(100, 35), sf::Vector2f(175, 305), sf::Color::Red);
+    sideColPlatforms.emplace_back(sf::Vector2f(100, 35), sf::Vector2f(310, 380), sf::Color::Green);
+    sideColPlatforms.emplace_back(sf::Vector2f(100, 35), sf::Vector2f(175, 305), sf::Color::Green);
 
     // goal platform
-    sideColPlatforms.emplace_back(sf::Vector2f(100, 35), sf::Vector2f(20, 180), sf::Color::Red);
+    sideColPlatforms.emplace_back(sf::Vector2f(100, 35), sf::Vector2f(20, 180), sf::Color::Green);
 
 
     //Border walls
