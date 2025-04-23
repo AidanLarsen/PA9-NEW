@@ -11,9 +11,11 @@
 
 int main()
 {
-
+    sf::View view;
+    view.setSize({ 600, 600 });
+    sf::Vector2i stanced = { 0u, 0u };
     float initial = 0.0f;
-
+    sf::Clock deltaClock;
 
     sf::RenderWindow window(sf::VideoMode({ 1536u, 1024u }), "SFML works!");
 
@@ -22,22 +24,22 @@ int main()
     Backdrop backdrop("Backdrop1.png", "Ground.png");
 
     std::vector<GroundEnemy> groundEnemies;
-    groundEnemies.emplace_back(character, 100, 100, 500);
+    groundEnemies.emplace_back(character, 100, 100, 500, 0, 0, 273, 409);
     
     std::vector<FlyingEnemy> flyingEnemies;
-    flyingEnemies.emplace_back(character2, 500, 500, 500);
+    flyingEnemies.emplace_back(character2, 500, 500, 500, 0, 0, 273, 409);
    
 
     std::vector<GameObject> platforms;
-    platforms.emplace_back(sf::Vector2f(1000, 40), sf::Vector2f(0, 760), sf::Color::Green);
+    platforms.emplace_back(sf::Vector2f(1500, 40), sf::Vector2f(0, 900), sf::Color::Green);
     platforms.emplace_back(sf::Vector2f(120, 50), sf::Vector2f(300, 520), sf::Color::Green);
 
     std::vector<GameObject> sideColPlatforms;
     sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 525), sf::Color::Red);
-    sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(-1, 0), sf::Color::Green);
-    sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(1000, 0), sf::Color::Green);
-    Player player(character, 200, 500);
-
+    sideColPlatforms.emplace_back(sf::Vector2f(.1, 1000), sf::Vector2f(-1, 0), sf::Color::Green);
+    sideColPlatforms.emplace_back(sf::Vector2f(.1, 1000), sf::Vector2f(1530, 0), sf::Color::Green);
+    Player player(character, 0, 750, 0, 0, 273, 409);
+    Animation animationManager;
     // checks if jump was initiated previously
     bool prevJump = false;
 
@@ -84,6 +86,7 @@ int main()
 
         if (jumpNow && !prevJump && player.isGrounded(platforms)) //!player.isJumping())
         {
+            animationManager.animate(player, Direction::Up, deltaClock);
             player.setJumping(true);
             // we can mess with setting the velocity depending on how high we want to jump
             player.setVelocityY(-30.0f);
@@ -100,13 +103,10 @@ int main()
         }
 
 
-       
-
-
-
         // left movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
         {
+            animationManager.animate(player, Direction::Right, deltaClock);
             player.moveRight();
             player.checkRightCol(sideColPlatforms);
         }
@@ -116,6 +116,7 @@ int main()
         // right movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
         {
+            animationManager.animate(player, Direction::Left, deltaClock);
             player.moveLeft();
             player.checkLeftCol(sideColPlatforms);
 
@@ -170,7 +171,8 @@ int main()
             flyingEnemy.drawEntity(window);
         }
 
-       // testEnemy.drawEntity(window);
+        view.setCenter(player.getSprite()->getPosition());
+        window.setView(view);
         player.drawEntity(window);
         window.display();
 
