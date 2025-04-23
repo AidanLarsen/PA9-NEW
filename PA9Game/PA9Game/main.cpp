@@ -114,7 +114,6 @@ int main()
 
         if (jumpNow && !prevJump && player.isGrounded(platforms)) //!player.isJumping())
         {
-            animationManager.animate(player, Direction::Up, deltaTime);
             player.setJumping(true);
             // we can mess with setting the velocity depending on how high we want to jump
             player.setVelocityY(-5.0f);
