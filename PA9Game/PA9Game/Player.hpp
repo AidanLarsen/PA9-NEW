@@ -41,6 +41,17 @@ public:
 		velocityY = newVelocity;
 	}
 
+	bool isGrounded(std::vector<GameObject> objects)
+	{
+		for (const auto& object : objects)
+		{
+			if (pSprite->getGlobalBounds().findIntersection(object.shape.getGlobalBounds()))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	void checkLeftCol(std::vector<GameObject> objects);
 	void checkRightCol(std::vector<GameObject> objects);
