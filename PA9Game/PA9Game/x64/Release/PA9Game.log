@@ -6,24 +6,59 @@ C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41
       C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(33,48): warning C4305: 'argument': truncation from 'double' to 'T'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(33,48): warning C4305:         with
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(33,48): warning C4305:         [
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(33,48): warning C4305:             T=float
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(33,48): warning C4305:         ]
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(34,48): warning C4305: 'argument': truncation from 'double' to 'T'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(34,48): warning C4305:         with
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(34,48): warning C4305:         [
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(34,48): warning C4305:             T=float
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(34,48): warning C4305:         ]
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(137,30): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(137,25): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(147,33): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(147,28): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(149,34): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(149,29): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(39,48): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(39,48): warning C4305:         with
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(39,48): warning C4305:         [
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(39,48): warning C4305:             T=float
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(39,48): warning C4305:         ]
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(40,48): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(40,48): warning C4305:         with
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(40,48): warning C4305:         [
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(40,48): warning C4305:             T=float
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(40,48): warning C4305:         ]
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(160,30): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(160,25): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(172,38): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(172,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(182,39): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(182,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,103): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,103): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,103): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,103): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,103): warning C4244:         ]
+  (compiling source file 'main.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,103):
+      the template instantiation context (the oldest one first) is
+          C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\main.cpp(26,18):
+          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::emplace_back<const char(&)[16],int,int,int,int,int,int,int>(const char (&)[16],int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=GroundEnemy
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(862,24):
+          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<const char(&)[16],int,int,int,int,int,int,int>(const char (&)[16],int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=GroundEnemy
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(780,20):
+          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<const char(&)[16],int,int,int,int,int,int,int>(const char (&)[16],int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=GroundEnemy
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(798,27):
+          see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const char(&)[16],int,int,int,int,int,int,int>(_Alloc &,_Objty *const ,const char (&)[16],int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<GroundEnemy>,
+              _Ty=GroundEnemy,
+              _Objty=GroundEnemy
+          ]
+  
   Generating code
-  1 of 460 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  1 of 569 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code

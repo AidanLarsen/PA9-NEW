@@ -53,18 +53,18 @@ int main()
     for (auto& flyingEnemy : flyingEnemies)
     {
         flyingEnemy.getSpriteVectors()[0] = sf::Vector2i{ 0u, 0u };
-        flyingEnemy.getSpriteVectors()[1] = sf::Vector2i{ 300u, 0u };
-        flyingEnemy.getSpriteVectors()[2] = sf::Vector2i{ 940u, 0u };
-        flyingEnemy.getSpriteVectors()[3] = sf::Vector2i{ 1230u, 0u };
+        flyingEnemy.getSpriteVectors()[1] = sf::Vector2i{ 900u, 0u };
+        flyingEnemy.getSpriteVectors()[2] = sf::Vector2i{ 1425u, 0u };
+        flyingEnemy.getSpriteVectors()[3] = sf::Vector2i{ 2300u, 0u };
     }
     
 
     for (auto& groundEnemy : groundEnemies)
     {
         groundEnemy.getSpriteVectors()[0] = sf::Vector2i{ 0u, 0u };
-        groundEnemy.getSpriteVectors()[1] = sf::Vector2i{ 900u, 0u };
-        groundEnemy.getSpriteVectors()[2] = sf::Vector2i{ 1425u, 0u };
-        groundEnemy.getSpriteVectors()[3] = sf::Vector2i{ 2300u, 0u };
+        groundEnemy.getSpriteVectors()[1] = sf::Vector2i{ 300u, 0u };
+        groundEnemy.getSpriteVectors()[2] = sf::Vector2i{ 940u, 0u };
+        groundEnemy.getSpriteVectors()[3] = sf::Vector2i{ 1230u, 0u };
     }
     
 
