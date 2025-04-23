@@ -1,53 +1,49 @@
 #include "Animation.hpp"
 
-void Animation::animate(Entity& entity, Direction direction, sf::Clock& deltaClock)
+//EntityPosition pos;
+
+void Animation::animate(Entity& entity, Direction direction, sf::Time& deltaTime)
 {
+	animationTimers[&entity] += deltaTime.asSeconds();
+	if (animationTimers[&entity] < 0.2f)
+		return;
+	animationTimers[&entity] = 0.0f;
+
 	switch (direction)
 	{
 	case (Direction::Up):
-		if (deltaClock.getElapsedTime().asSeconds() > 0.2f)
-		{
-			if (entity.getRect()->position == sf::Vector2i{ 730u, 512u })
+			if (entity.getRect()->position == entity.getSpriteVectors()[0])//sf::Vector2i{ 730u, 512u })
 			{
-				entity.getRect()->position = sf::Vector2i{ 0u, 0u };
+				entity.getRect()->position = entity.getSpriteVectors()[1];
 			}
 			else
 			{
 				entity.getRect()->position = sf::Vector2i{ 730u, 512u };
 			}
 			entity.getSprite()->setTextureRect(*entity.getRect());
-			deltaClock.restart();
-		}
 		break;
 	case (Direction::Left):
-		if (deltaClock.getElapsedTime().asSeconds() > 0.2f)
-		{
-			if (entity.getRect()->position == sf::Vector2i{ 730u, 512u })
+			if (entity.getRect()->position == entity.getSpriteVectors()[3])
 			{
-				entity.getRect()->position = sf::Vector2i{ 0u, 0u };
+				entity.getRect()->position = entity.getSpriteVectors()[2];
 			}
 			else
 			{
-				entity.getRect()->position = sf::Vector2i{ 730u, 512u };
+				entity.getRect()->position = entity.getSpriteVectors()[3];
 			}
+
 			entity.getSprite()->setTextureRect(*entity.getRect());
-			deltaClock.restart();
-		}
 		break;
 	case (Direction::Right):
-		if (deltaClock.getElapsedTime().asSeconds() > 0.2f)
-		{
-			if (entity.getRect()->position == sf::Vector2i{ 365u, 512u })
+			if (entity.getRect()->position == entity.getSpriteVectors()[1])
 			{
-				entity.getRect()->position = sf::Vector2i{ 365u, 0u };
+				entity.getRect()->position = entity.getSpriteVectors()[0];
 			}
 			else
 			{
-				entity.getRect()->position = sf::Vector2i{ 365u, 512u };
+				entity.getRect()->position = entity.getSpriteVectors()[1];
 			}
 			entity.getSprite()->setTextureRect(*entity.getRect());
-			deltaClock.restart();
-		}
 		break;
 	}
 }
