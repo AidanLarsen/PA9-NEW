@@ -8,6 +8,7 @@
 #include "GroundEnemy.hpp"
 #include "FlyingEnemy.hpp"
 
+
 int main()
 {
 
@@ -35,11 +36,10 @@ int main()
     sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 525), sf::Color::Red);
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(-1, 0), sf::Color::Green);
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(1000, 0), sf::Color::Green);
-    Player player(character, 250, 250);
+    Player player(character, 200, 500);
 
     // checks if jump was initiated previously
     bool prevJump = false;
-
 
     while (window.isOpen())
     {
@@ -54,6 +54,9 @@ int main()
             player.checkGravity(platforms);
         }
 
+        player.collidedWithGroundEnemy(groundEnemies);
+
+        player.collidedWithFlyingEnemy(flyingEnemies);
 
         //moniters if the player is at the maximum jump height
         if (player.isJumping() && player.getPositionY() <= initial - 200.0f)
@@ -168,8 +171,6 @@ int main()
         }
 
        // testEnemy.drawEntity(window);
-
-        
         player.drawEntity(window);
         window.display();
 

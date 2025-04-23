@@ -1,14 +1,15 @@
 #pragma once
-
 #include "Entity.hpp"
 #include "Object.hpp"
+#include "FlyingEnemy.hpp"
+#include "GroundEnemy.hpp"
 
 class Player : public Entity
 {
 public:
 	Player() = default;
 	explicit Player(const std::string imgDirectory, float x, float y)
-		: Entity(imgDirectory, x, y), velocityY(0.0f), jumping(false)
+		: Entity(imgDirectory, x, y), velocityY(0.0f), jumping(false), health(3), coins(0)
 	{
 
 	}
@@ -52,7 +53,9 @@ public:
 		}
 		return false;
 	}
-	
+
+	void collidedWithFlyingEnemy(std::vector<FlyingEnemy>& enemies);
+	void collidedWithGroundEnemy(std::vector<GroundEnemy>& enemies);
 	void checkLeftCol(std::vector<GameObject> objects);
 	void checkRightCol(std::vector<GameObject> objects);
 	bool checkTopCol(std::vector<GameObject> objects);
@@ -63,7 +66,14 @@ public:
 	void jump();
 	//void jump();
 
+	int getHealth() const {
+		return health;
+	}
+
 private:
+
+	int health;
+	int coins;
 	bool jumping;
 	float velocityY;
 	

@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Entity.hpp"
@@ -14,6 +15,12 @@ public:
 		rightBound = x + distance;
 
 		velocity = { 0.2f, 0.f };
+
+	}
+
+	sf::FloatRect getGlobalBoundsofGroundEnemy() const {
+
+		return pSprite->getGlobalBounds();
 
 	}
 
