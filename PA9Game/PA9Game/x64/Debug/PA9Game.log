@@ -6,22 +6,12 @@ C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA
       C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(37,48): warning C4305: 'argument': truncation from 'double' to 'T'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(37,48): warning C4305:         with
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(37,48): warning C4305:         [
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(37,48): warning C4305:             T=float
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(37,48): warning C4305:         ]
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(38,48): warning C4305: 'argument': truncation from 'double' to 'T'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(38,48): warning C4305:         with
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(38,48): warning C4305:         [
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(38,48): warning C4305:             T=float
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(38,48): warning C4305:         ]
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(130,30): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(130,25): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(142,38): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(142,34): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(153,39): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(153,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(132,30): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(132,25): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(144,38): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(144,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(155,39): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(155,34): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103): warning C4244:         with
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103): warning C4244:         [

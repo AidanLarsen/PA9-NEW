@@ -8,18 +8,12 @@
 class GameObject {
 public:
     sf::RectangleShape shape;
-    GameObject(sf::Vector2f newSize, sf::Vector2f newPos, const std::string imgDirectory) {
+    GameObject(sf::Vector2f newSize, sf::Vector2f newPos, sf::Color newColor) {
         shape.setPosition(newPos);
         shape.setSize(newSize);
-        if (!pTexture.loadFromFile(imgDirectory)) {
-            std::cerr << "Error\nCould not load image from directory.\n";
-            return;
-        }
-        pSprite.emplace(pTexture);
+        shape.setFillColor(newColor);
+
     }
-
-
 private:
-    sf::Texture pTexture;
-    std::optional<sf::Sprite> pSprite;
+    
 };
