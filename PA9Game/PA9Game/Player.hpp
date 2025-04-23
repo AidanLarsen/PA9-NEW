@@ -3,13 +3,14 @@
 #include "Object.hpp"
 #include "FlyingEnemy.hpp"
 #include "GroundEnemy.hpp"
+#include "flag.hpp"
 
 class Player : public Entity
 {
 public:
 	Player() = default;
-	explicit Player(const std::string imgDirectory, float x, float y, unsigned rectX, unsigned rectY, unsigned width, unsigned height)
-		: Entity(imgDirectory, x, y, rectX, rectY, width, height), velocityY(0.0f), jumping(false), health(3), coins(0)
+	explicit Player(const sf::Texture& texture, float x, float y, unsigned rectX, unsigned rectY, unsigned width, unsigned height)
+		: Entity(texture, x, y, rectX, rectY, width, height), velocityY(0.0f), jumping(false), health(3), coins(0)
 	{
 
 	}
@@ -64,6 +65,14 @@ public:
 	void moveLeft();
 	void moveDown();
 	void jump();
+	void collidingWithGoal(Flag flag)
+	{
+		if (pSprite->getGlobalBounds().findIntersection(flag.getSprite()->getGlobalBounds()))
+		{
+			sf::Vector2f initVec(startingPoint.first, startingPoint.second);
+			pSprite->setPosition(initVec);
+		}
+	}
 	//void jump();
 
 	int getHealth() const {

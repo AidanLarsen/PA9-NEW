@@ -1,14 +1,16 @@
 #include "Entity.hpp"
 
-Entity::Entity(const std::string imgDirectory, float x, float y,
+Entity::Entity(const sf::Texture& texture, float x, float y,
 	unsigned rectX, unsigned rectY, unsigned width, unsigned height) {
-	if (!pTexture.loadFromFile(imgDirectory)) {
+	
+	pTexture = &texture;
+	/*if (!pTexture.loadFromFile(imgDirectory)) {
 		std::cerr << "Error\nCould not load image from directory.\n";
 		return;
-	}
+	}*/
 
 	setRect(rectX, rectY, width, height);
-	pSprite.emplace(pTexture, rect);
+	pSprite.emplace(*pTexture, rect);
 	pSprite->setPosition({ x, y });
 	startingPoint = { x, y };
 }
@@ -60,7 +62,7 @@ sf::Sprite* Entity::getSprite()
 
 void Entity::updateSprite()
 {
-	pSprite.emplace(pTexture, rect);
+	pSprite.emplace(*pTexture, rect);
 }
 
 sf::Vector2i* Entity::getSpriteVectors()

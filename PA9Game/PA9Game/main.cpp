@@ -7,6 +7,7 @@
 #include "Animation.hpp"
 #include "GroundEnemy.hpp"
 #include "FlyingEnemy.hpp"
+#include "flag.hpp"
 #include <vector>
 
 
@@ -22,23 +23,75 @@ int main()
 
     Backdrop backdrop("Backdrop1.png", "Ground.png");
 
+    sf::Texture groundEnemyTex;
+    groundEnemyTex.loadFromFile("GroundEnemy.png");
     std::vector<GroundEnemy> groundEnemies;
-    groundEnemies.emplace_back("GroundEnemy.png", 100, 100, 500, 0, 0, 330, 460);
-    
+    // first floor
+    groundEnemies.emplace_back(groundEnemyTex, 175, 820, 350, 0, 0, 330, 460);
+    //second floor
+    groundEnemies.emplace_back(groundEnemyTex, 475, 455, 300, 0, 0, 330, 460);
+    groundEnemies.emplace_back(groundEnemyTex, 545, 305, 200, 0, 0, 330, 460);
+
+
+    sf::Texture flyingEnemyTex;
+    flyingEnemyTex.loadFromFile("EnemySky.png");
     std::vector<FlyingEnemy> flyingEnemies;
-    flyingEnemies.emplace_back("EnemySky.png", 500, 500, 500, 0, 0, 400, 420);
+    //first floor
+    flyingEnemies.emplace_back(flyingEnemyTex, 500, 650, 300, 0, 0, 400, 420);
+    //second floor
+    flyingEnemies.emplace_back(flyingEnemyTex, 580, 200, 600, 0, 0, 400, 420);
+
 
 
     std::vector<GameObject> platforms;
-    platforms.emplace_back(sf::Vector2f(1500, 40), sf::Vector2f(0, 900), sf::Color::Green);
-    platforms.emplace_back(sf::Vector2f(120, 50), sf::Vector2f(300, 520), sf::Color::Green);
+    //floor
+    platforms.emplace_back(sf::Vector2f(1500, 40), sf::Vector2f(0, 900), sf::Color::Transparent);
+    // floor 1 platform
+    platforms.emplace_back(sf::Vector2f(200, 30), sf::Vector2f(300, 755), sf::Color::Green);
+    // right rising platforms
+    platforms.emplace_back(sf::Vector2f(250, 30), sf::Vector2f(1300, 725), sf::Color::Green);
+    platforms.emplace_back(sf::Vector2f(125, 30), sf::Vector2f(1100, 625), sf::Color::Green);
+
+    // second floor
+    platforms.emplace_back(sf::Vector2f(1000, 40), sf::Vector2f(0, 525), sf::Color::Green);
+    // second floor platforms
+    platforms.emplace_back(sf::Vector2f(400, 40), sf::Vector2f(500, 375), sf::Color::Green);
+    // second floor rising platforms
+    platforms.emplace_back(sf::Vector2f(100, 40), sf::Vector2f(310, 375), sf::Color::Green);
+    platforms.emplace_back(sf::Vector2f(100, 40), sf::Vector2f(175, 300), sf::Color::Green);
+
+    // goal platform
+    platforms.emplace_back(sf::Vector2f(100, 40), sf::Vector2f(20, 175), sf::Color::Green);
 
     std::vector<GameObject> sideColPlatforms;
-    sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 525), sf::Color::Red);
-  
+    // floor 1 platform
+    sideColPlatforms.emplace_back(sf::Vector2f(200, 25), sf::Vector2f(300, 760), sf::Color::Red);
+    //right rising platforms
+    sideColPlatforms.emplace_back(sf::Vector2f(250, 25), sf::Vector2f(1300, 730), sf::Color::Red);
+    sideColPlatforms.emplace_back(sf::Vector2f(125, 25), sf::Vector2f(1100, 630), sf::Color::Red);
+    // second floor
+    sideColPlatforms.emplace_back(sf::Vector2f(1000, 35), sf::Vector2f(0, 530), sf::Color::Red);
+    // second floor platforms
+    sideColPlatforms.emplace_back(sf::Vector2f(400, 35), sf::Vector2f(500, 380), sf::Color::Red);
+    // second floor rising platforms
+    sideColPlatforms.emplace_back(sf::Vector2f(100, 35), sf::Vector2f(310, 380), sf::Color::Red);
+    sideColPlatforms.emplace_back(sf::Vector2f(100, 35), sf::Vector2f(175, 305), sf::Color::Red);
+
+    // goal platform
+    sideColPlatforms.emplace_back(sf::Vector2f(100, 35), sf::Vector2f(20, 180), sf::Color::Red);
+
+
+    //Border walls
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 1000), sf::Vector2f(-1, 0), sf::Color::Green);
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 1000), sf::Vector2f(1530, 0), sf::Color::Green);
-    Player player("Sprite.png", 0, 750, 0, 0, 273, 409);
+
+    sf::Texture playerTex;
+    playerTex.loadFromFile("Sprite.png");
+    Player player(playerTex, 0, 750, 0, 0, 273, 409);
+
+    sf::Texture flagTex;
+    flagTex.loadFromFile("goalFlag.png");
+    Flag flag(flagTex, 30, 120, 0, 0, 120, 120);
 
     Animation animationManager;
     // checks if jump was initiated previously
@@ -84,6 +137,8 @@ int main()
             player.checkGravity(platforms);
         }
 
+        player.collidingWithGoal(flag);
+
         player.collidedWithGroundEnemy(groundEnemies);
 
         player.collidedWithFlyingEnemy(flyingEnemies);
@@ -117,7 +172,7 @@ int main()
             animationManager.animate(player, Direction::Up, deltaTime);
             player.setJumping(true);
             // we can mess with setting the velocity depending on how high we want to jump
-            player.setVelocityY(-5.0f);
+            player.setVelocityY(-10.0f);
             initial = player.getPositionY();
         }
 
@@ -169,7 +224,7 @@ int main()
 
         for (auto& groundEnemy : groundEnemies)
         {
-            groundEnemy.setScale(.2, .2);
+            groundEnemy.setScale(.15, .15);
         }
         for (auto& groundEnemy : groundEnemies)
         {
@@ -179,7 +234,7 @@ int main()
 
         for (auto& flyingEnemy : flyingEnemies)
         {
-            flyingEnemy.setScale(0.9, 0.9);
+            flyingEnemy.setScale(0.2, 0.2);
         }
         
 
@@ -210,7 +265,9 @@ int main()
 
         //view.setCenter(player.getSprite()->getPosition());
         //window.setView(view);
+        flag.setScale(.3, .3);
 
+        flag.drawEntity(window);
         player.drawEntity(window);
         window.display();
 

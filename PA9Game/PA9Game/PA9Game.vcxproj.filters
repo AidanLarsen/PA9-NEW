@@ -18,11 +18,14 @@
     <ClInclude Include="Object.hpp" />
     <ClInclude Include="Prop.hpp" />
     <ClInclude Include="Player.hpp" />
+    <ClInclude Include="flag.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Backdrop.png" />
     <Image Include="Backdrop1.png" />
     <Image Include="Sprite.png" />
+    <Image Include="platform.png" />
+    <Image Include="goalFlag.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="arial.ttf" />

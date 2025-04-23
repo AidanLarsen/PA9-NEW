@@ -8,9 +8,9 @@ void GroundEnemy::update() {
 
     sf::Vector2f currentPos = pSprite->getPosition();
 
-    if (currentPos.x >= rightBound) velocity.x = -.02f;
+    if (currentPos.x >= rightBound) velocity.x = -.1f;
 
-    if (currentPos.x <= leftBound)  velocity.x = .02f;
+    if (currentPos.x <= leftBound)  velocity.x = .1f;
 
     pSprite->move(velocity);
 }

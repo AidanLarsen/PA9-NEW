@@ -138,6 +138,7 @@
     <ClInclude Include="Animation.hpp" />
     <ClInclude Include="Backdrop.hpp" />
     <ClInclude Include="Entity.hpp" />
+    <ClInclude Include="flag.hpp" />
     <ClInclude Include="FlyingEnemy.hpp" />
     <ClInclude Include="GroundEnemy.hpp" />
     <ClInclude Include="Object.hpp" />
@@ -161,6 +162,7 @@
   <ItemGroup>
     <Image Include="Backdrop.png" />
     <Image Include="Backdrop1.png" />
+    <Image Include="goalFlag.png" />
     <Image Include="platform.png" />
     <Image Include="Sprite.png" />
   </ItemGroup>

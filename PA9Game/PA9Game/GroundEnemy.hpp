@@ -8,14 +8,14 @@
 class GroundEnemy : public Entity {
 public:
 
-	GroundEnemy(const std::string imgDirectory, float x, float y, float distance, unsigned rectX, unsigned rectY, unsigned width, unsigned height) : Entity(imgDirectory, x, y, rectX, rectY, width, height)
+	GroundEnemy(const sf::Texture& texture, float x, float y, float distance, unsigned rectX, unsigned rectY, unsigned width, unsigned height) : Entity(texture, x, y, rectX, rectY, width, height)
 	{
 
 		leftBound = x;
 
 		rightBound = x + distance;
 
-		velocity = { 0.9f, 0.f };
+		velocity = { 0.2f, 0.f };
 
 	}
 

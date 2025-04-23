@@ -7,7 +7,7 @@ class Entity {
 public:
 
 	Entity() = default;
-	explicit Entity(const std::string imgDirectory, float x, float y,
+	explicit Entity(const sf::Texture& texture, float x, float y,
 	unsigned rectX, unsigned rectY, unsigned width, unsigned height);
 	void drawEntity(sf::RenderWindow& window);
 	void setPosition(float x, float y);
@@ -20,7 +20,7 @@ public:
 	sf::Vector2i* getSpriteVectors();
 protected:
 
-	sf::Texture pTexture;
+	const sf::Texture* pTexture = nullptr;
 	std::optional<sf::Sprite> pSprite;
 	sf::IntRect rect = sf::IntRect({ 0,0 },{1000, 1000});
 	std::pair<float, float> startingPoint; //variable to hold the starting position
