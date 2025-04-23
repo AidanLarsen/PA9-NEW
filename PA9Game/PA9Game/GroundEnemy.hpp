@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "Entity.hpp"
 #include <utility>
+#include "Animation.hpp"
 
 class GroundEnemy : public Entity {
 public:
@@ -14,7 +15,7 @@ public:
 
 		rightBound = x + distance;
 
-		velocity = { 0.2f, 0.f };
+		velocity = { 0.9f, 0.f };
 
 	}
 
@@ -24,6 +25,15 @@ public:
 
 	}
 
+	Direction getDirection() const
+	{
+		if (velocity.x > 0)
+			return Direction::Right;
+		else if (velocity.x < 0)
+			return Direction::Left;
+		else
+			return Direction::Up;
+	}
 	void update();
 
 private:

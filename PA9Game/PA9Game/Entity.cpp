@@ -46,7 +46,6 @@ void Entity::setRect(unsigned rectX, unsigned rectY, unsigned width, unsigned he
 	this->rect.size.y = height;
 	this->rect.position.x = rectX;
 	this->rect.position.y = rectY;
-	//= ({0, 0}, { 273, 409 });
 }
 
 sf::IntRect* Entity::getRect()
@@ -62,4 +61,9 @@ sf::Sprite* Entity::getSprite()
 void Entity::updateSprite()
 {
 	pSprite.emplace(pTexture, rect);
+}
+
+sf::Vector2i* Entity::getSpriteVectors()
+{
+	return spriteVectors;
 }
