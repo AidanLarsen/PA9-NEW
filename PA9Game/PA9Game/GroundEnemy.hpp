@@ -1,4 +1,4 @@
-#pragma	once
+#pragma once
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Entity.hpp"
@@ -18,6 +18,13 @@ public:
 		velocity = { 0.9f, 0.f };
 
 	}
+
+	sf::FloatRect getGlobalBoundsofGroundEnemy() const {
+
+		return pSprite->getGlobalBounds();
+
+	}
+
 	Direction getDirection() const
 	{
 		if (velocity.x > 0)

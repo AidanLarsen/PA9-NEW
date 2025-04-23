@@ -19,6 +19,12 @@ public:
 
 	}
 
+	sf::FloatRect getGlobalBoundsofEnemy() const{
+
+		return pSprite->getGlobalBounds();
+
+	}
+
 	void update();
 	Direction getDirection() const
 	{

@@ -11,28 +11,34 @@
 
 int main()
 {
-    
-
-
+    sf::View view;
+    view.setSize({ 600, 600 });
+    sf::Vector2i stanced = { 0u, 0u };
     float initial = 0.0f;
     sf::Clock deltaClock;
+
     sf::RenderWindow window(sf::VideoMode({ 1536u, 1024u }), "SFML works!");
 
     Backdrop backdrop("Backdrop1.png", "Ground.png");
 
-    GroundEnemy testEnemy("GroundEnemy.png", 100, 100, 500, 0, 0, 330, 460);
+    std::vector<GroundEnemy> groundEnemies;
+    groundEnemies.emplace_back("GroundEnemy.png", 100, 100, 500, 0, 0, 330, 460);
+    
+    std::vector<FlyingEnemy> flyingEnemies;
+    flyingEnemies.emplace_back("EnemySky.png", 500, 500, 500, 0, 0, 400, 420);
 
-    FlyingEnemy testEnemy2("EnemySky.png", 500, 500, 500, 0, 0, 400, 420);
 
     std::vector<GameObject> platforms;
-    platforms.emplace_back(sf::Vector2f(1000, 40), sf::Vector2f(0, 760), sf::Color::Green);
+    platforms.emplace_back(sf::Vector2f(1500, 40), sf::Vector2f(0, 900), sf::Color::Green);
     platforms.emplace_back(sf::Vector2f(120, 50), sf::Vector2f(300, 520), sf::Color::Green);
 
     std::vector<GameObject> sideColPlatforms;
     sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 525), sf::Color::Red);
-    sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(-1, 0), sf::Color::Green);
-    sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(1000, 0), sf::Color::Green);
-    Player player("Sprite.png", 250, 250, 0, 0, 273, 409);
+  
+    sideColPlatforms.emplace_back(sf::Vector2f(.1, 1000), sf::Vector2f(-1, 0), sf::Color::Green);
+    sideColPlatforms.emplace_back(sf::Vector2f(.1, 1000), sf::Vector2f(1530, 0), sf::Color::Green);
+    Player player(character, 0, 750, 0, 0, 273, 409);
+
     Animation animationManager;
     // checks if jump was initiated previously
     bool prevJump = false;
@@ -64,16 +70,40 @@ int main()
                 window.close();
         }
 
-        if (!player.isJumping())
+        if (!player.isGrounded(platforms))
         {
             player.checkGravity(platforms);
         }
 
+        player.collidedWithGroundEnemy(groundEnemies);
+
+        player.collidedWithFlyingEnemy(flyingEnemies);
+
+        //moniters if the player is at the maximum jump height
+        if (player.isJumping() && player.getPositionY() <= initial - 200.0f)
+        {
+            player.setVelocityY(0.0f);
+            if (player.isGrounded(platforms))
+            {
+                player.setJumping(false);
+            }
+        }
+
+        // checks if the player has completed the jumping arc
+        if (player.isJumping() && player.getVelocityY() >= 0)
+        {
+            player.setVelocityY(0.0f);
+            if (player.isGrounded(platforms))
+            {
+                player.setJumping(false);
+            }
+
+        }
 
         // this ensures that only one jump is preformed even if the user holds down the space bar
         bool jumpNow = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space);
 
-        if (jumpNow && !prevJump && !player.isJumping())
+        if (jumpNow && !prevJump && player.isGrounded(platforms)) //!player.isJumping())
         {
             animationManager.animate(player, Direction::Up, deltaTime);
             player.setJumping(true);
@@ -89,22 +119,6 @@ int main()
         {
             player.jump();
         }
-
-
-        //moniters if the player is at the maximum jump height
-        if (player.isJumping() && player.getPositionY() <= initial - 200.0f)
-        {
-            player.setVelocityY(0.0f);
-            player.setJumping(false);
-        }
-
-        // checks if the player has completed the jumping arc
-        if (player.isJumping() && player.getVelocityY() >= 0)
-        {
-            player.setVelocityY(0.0f);
-            player.setJumping(false);
-        }
-
 
 
         // left movement
@@ -144,19 +158,42 @@ int main()
             window.draw(sideCol.shape);
         }
 
-        testEnemy.setScale(0.2, 0.2);
+        for (auto& groundEnemy : groundEnemies)
+        {
+            groundEnemy.setScale(.2, .2);
+        }
+        for (auto& groundEnemy : groundEnemies)
+        {
+            groundEnemy.drawEntity(window);
+            
+        }
 
-        testEnemy2.setScale(0.9, 0.9);
+        for (auto& flyingEnemy : flyingEnemies)
+        {
+            flyingEnemy.setScale(0.9, 0.9);
+        }
+        
 
-        testEnemy.update();
-        testEnemy2.update();
+        for (auto& groundEnemy : groundEnemies)
+        {
+            groundEnemy.update();
+        }
+      
         animationManager.animate(testEnemy, testEnemy.getDirection(), deltaTime);
         animationManager.animate(testEnemy2, testEnemy2.getDirection(), deltaTime);
-     
-        testEnemy.drawEntity(window);
+      
+        for (auto& flyingEnemy : flyingEnemies)
+        {
+            flyingEnemy.update();
+        }
+        for (auto& flyingEnemy : flyingEnemies)
+        {
+            flyingEnemy.drawEntity(window);
+        }
 
-        testEnemy2.drawEntity(window);
-        
+        view.setCenter(player.getSprite()->getPosition());
+        window.setView(view);
+
         player.drawEntity(window);
         window.display();
 

@@ -1,7 +1,9 @@
 #pragma once
 
+#include<iostream>
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <utility>
 
 class GameObject {
 public:
@@ -10,9 +12,8 @@ public:
         shape.setPosition(newPos);
         shape.setSize(newSize);
         shape.setFillColor(newColor);
+
     }
-
-
 private:
-   
+    
 };

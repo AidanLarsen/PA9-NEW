@@ -23,6 +23,7 @@ void Animation::animate(Entity& entity, Direction direction, sf::Time& deltaTime
 			entity.getSprite()->setTextureRect(*entity.getRect());
 		break;
 	case (Direction::Left):
+
 			if (entity.getRect()->position == entity.getSpriteVectors()[3])
 			{
 				entity.getRect()->position = entity.getSpriteVectors()[2];
