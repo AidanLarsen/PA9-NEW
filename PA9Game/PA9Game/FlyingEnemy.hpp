@@ -7,7 +7,7 @@
 class FlyingEnemy : public Entity {
 public:
 
-	FlyingEnemy(const std::string imgDirectory, float x, float y, float distance) : Entity(imgDirectory, x, y)
+	FlyingEnemy(const std::string imgDirectory, float x, float y, float distance, unsigned rectX, unsigned rectY, unsigned width, unsigned height) : Entity(imgDirectory, x, y, rectX, rectY, width, height)
 	{
 
 		leftBound = x;
