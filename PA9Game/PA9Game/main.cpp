@@ -179,7 +179,7 @@ int main()
 
         for (auto& flyingEnemy : flyingEnemies)
         {
-            flyingEnemy.setScale(0.9, 0.9);
+            flyingEnemy.setScale(0.2, 0.2);
         }
         
 

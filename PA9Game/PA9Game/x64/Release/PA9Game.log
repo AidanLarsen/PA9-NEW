@@ -1,78 +1,4 @@
-﻿  Animation.cpp
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Animation.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-  Backdrop.cpp
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Backdrop.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-  Entity.cpp
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Entity.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-  FlyingEnemy.cpp
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'FlyingEnemy.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-  GroundEnemy.cpp
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'GroundEnemy.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-  Player.cpp
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Player.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(39,20): warning C4305: 'argument': truncation from 'double' to 'T'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(39,20): warning C4305:         with
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(39,20): warning C4305:         [
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(39,20): warning C4305:             T=float
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(39,20): warning C4305:         ]
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(50,21): warning C4305: 'argument': truncation from 'double' to 'T'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(50,21): warning C4305:         with
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(50,21): warning C4305:         [
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(50,21): warning C4305:             T=float
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(50,21): warning C4305:         ]
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(91,18): warning C4305: 'argument': truncation from 'double' to 'T'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(91,18): warning C4305:         with
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(91,18): warning C4305:         [
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(91,18): warning C4305:             T=float
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(91,18): warning C4305:         ]
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(96,19): warning C4305: 'argument': truncation from 'double' to 'T'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(96,19): warning C4305:         with
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(96,19): warning C4305:         [
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(96,19): warning C4305:             T=float
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(96,19): warning C4305:         ]
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(101,21): warning C4305: 'argument': truncation from 'double' to 'T'
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(101,21): warning C4305:         with
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(101,21): warning C4305:         [
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(101,21): warning C4305:             T=float
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(101,21): warning C4305:         ]
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\PA9Game\Player.cpp(109,18): warning C4305: '+=': truncation from 'double' to 'float'
-  main.cpp
+﻿  main.cpp
 C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
   (compiling source file 'main.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
@@ -132,8 +58,9 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.3313
           ]
   
   Generating code
-  Previous IPDB not found, fall back to full compilation.
-  All 569 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  1 of 569 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   PA9Game.vcxproj -> C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\x64\Release\PA9Game.exe
   'pwsh.exe' is not recognized as an internal or external command,
