@@ -262,8 +262,8 @@ int main()
             flyingEnemy.drawEntity(window);
         }
 
-        //view.setCenter(player.getSprite()->getPosition());
-        //window.setView(view);
+        view.setCenter(player.getSprite()->getPosition());
+        window.setView(view);
         flag.setScale(.3, .3);
 
         flag.drawEntity(window);
