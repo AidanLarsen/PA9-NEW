@@ -8,7 +8,6 @@
 #include "GroundEnemy.hpp"
 #include "FlyingEnemy.hpp"
 
-//EntityPosition pos;
 
 int main()
 {
@@ -21,7 +20,7 @@ int main()
 
     Backdrop backdrop("Backdrop1.png", "Ground.png");
 
-    GroundEnemy testEnemy("Lebron.png", 100, 100, 500, 0, 0, 400, 409);
+    GroundEnemy testEnemy("GroundEnemy.png", 100, 100, 500, 0, 0, 330, 460);
 
     FlyingEnemy testEnemy2("EnemySky.png", 500, 500, 500, 0, 0, 400, 420);
 
@@ -44,10 +43,15 @@ int main()
     player.getSpriteVectors()[2] = sf::Vector2i{ 1380u, 0u };
     player.getSpriteVectors()[3] = sf::Vector2i{ 860u, 0u };
 
+    testEnemy.getSpriteVectors()[0] = sf::Vector2i{ 0u, 0u };
+    testEnemy.getSpriteVectors()[1] = sf::Vector2i{ 300u, 0u };
+    testEnemy.getSpriteVectors()[2] = sf::Vector2i{ 940u, 0u };
+    testEnemy.getSpriteVectors()[3] = sf::Vector2i{ 1230u, 0u };
+
     testEnemy2.getSpriteVectors()[0] = sf::Vector2i{ 0u, 0u };
     testEnemy2.getSpriteVectors()[1] = sf::Vector2i{ 900u, 0u };
     testEnemy2.getSpriteVectors()[2] = sf::Vector2i{ 1425u, 0u };
-    testEnemy2.getSpriteVectors()[3] = sf::Vector2i{ 2341u, 0u };
+    testEnemy2.getSpriteVectors()[3] = sf::Vector2i{ 2300u, 0u };
 
     while (window.isOpen())
     {
@@ -74,7 +78,7 @@ int main()
             animationManager.animate(player, Direction::Up, deltaTime);
             player.setJumping(true);
             // we can mess with setting the velocity depending on how high we want to jump
-            player.setVelocityY(-30.0f);
+            player.setVelocityY(-5.0f);
             initial = player.getPositionY();
         }
 

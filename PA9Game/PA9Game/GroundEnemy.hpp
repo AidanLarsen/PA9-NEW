@@ -15,7 +15,7 @@ public:
 
 		rightBound = x + distance;
 
-		velocity = { 0.2f, 0.f };
+		velocity = { 0.9f, 0.f };
 
 	}
 	Direction getDirection() const
