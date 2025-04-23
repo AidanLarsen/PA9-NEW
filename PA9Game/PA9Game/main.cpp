@@ -18,7 +18,7 @@ int main()
     float initial = 0.0f;
     sf::Clock deltaClock;
 
-    sf::RenderWindow window(sf::VideoMode({ 1536u, 1024u }), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode({ 1536u, 1024u }), "Platformer");
 
     Backdrop backdrop("Backdrop1.png", "Ground.png");
 
@@ -208,8 +208,8 @@ int main()
             flyingEnemy.drawEntity(window);
         }
 
-        view.setCenter(player.getSprite()->getPosition());
-        window.setView(view);
+        //view.setCenter(player.getSprite()->getPosition());
+        //window.setView(view);
 
         player.drawEntity(window);
         window.display();
