@@ -16,12 +16,12 @@ C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA
 C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(40,48): warning C4305:         [
 C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(40,48): warning C4305:             T=float
 C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(40,48): warning C4305:         ]
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(133,30): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(133,25): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(145,38): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(145,34): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(156,39): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(156,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(160,30): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(160,25): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(172,38): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(172,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(182,39): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(182,34): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103): warning C4244:         with
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103): warning C4244:         [
@@ -30,24 +30,24 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.3480
   (compiling source file 'main.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103):
       the template instantiation context (the oldest one first) is
-          C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(27,19):
-          see reference to function template instantiation 'GroundEnemy &std::vector<GroundEnemy,std::allocator<GroundEnemy>>::emplace_back<const std::string&,int,int,int,int,int,int,int>(const std::string &,int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
-              C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(27,31):
+          C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(26,19):
+          see reference to function template instantiation 'GroundEnemy &std::vector<GroundEnemy,std::allocator<GroundEnemy>>::emplace_back<const char(&)[16],int,int,int,int,int,int,int>(const char (&)[16],int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+              C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(26,31):
               see the first reference to 'std::vector<GroundEnemy,std::allocator<GroundEnemy>>::emplace_back' in 'main'
           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector(909,24):
-          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<const std::string&,int,int,int,int,int,int,int>(const std::string &,int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<const char(&)[16],int,int,int,int,int,int,int>(const char (&)[16],int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
           with
           [
               _Ty=GroundEnemy
           ]
           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector(830,20):
-          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<const std::string&,int,int,int,int,int,int,int>(const std::string &,int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<const char(&)[16],int,int,int,int,int,int,int>(const char (&)[16],int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
           with
           [
               _Ty=GroundEnemy
           ]
           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector(848,27):
-          see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const std::string&,int,int,int,int,int,int,int>(_Alloc &,_Objty *const ,const std::string &,int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const char(&)[16],int,int,int,int,int,int,int>(_Alloc &,_Objty *const ,const char (&)[16],int &&,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
           with
           [
               _Alloc=std::allocator<GroundEnemy>,
@@ -55,4 +55,6 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.3480
               _Objty=GroundEnemy
           ]
   
-  PA9Game.vcxproj -> C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\x64\Debug\PA9Game.exe
+main.obj : error LNK2019: unresolved external symbol "public: class sf::Vector2<int> * __cdecl Entity::getSpriteVectors(void)" (?getSpriteVectors@Entity@@QEAAPEAV?$Vector2@H@sf@@XZ) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "public: void __cdecl Animation::animate(class Entity &,enum Direction,class sf::Time &)" (?animate@Animation@@QEAAXAEAVEntity@@W4Direction@@AEAVTime@sf@@@Z) referenced in function main
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\x64\Debug\PA9Game.exe : fatal error LNK1120: 2 unresolved externals

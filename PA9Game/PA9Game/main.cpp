@@ -7,6 +7,7 @@
 #include "Animation.hpp"
 #include "GroundEnemy.hpp"
 #include "FlyingEnemy.hpp"
+#include <vector>
 
 
 int main()
@@ -37,7 +38,7 @@ int main()
   
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 1000), sf::Vector2f(-1, 0), sf::Color::Green);
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 1000), sf::Vector2f(1530, 0), sf::Color::Green);
-    Player player(character, 0, 750, 0, 0, 273, 409);
+    Player player("Sprite.png", 0, 750, 0, 0, 273, 409);
 
     Animation animationManager;
     // checks if jump was initiated previously
@@ -49,15 +50,23 @@ int main()
     player.getSpriteVectors()[2] = sf::Vector2i{ 1380u, 0u };
     player.getSpriteVectors()[3] = sf::Vector2i{ 860u, 0u };
 
-    testEnemy.getSpriteVectors()[0] = sf::Vector2i{ 0u, 0u };
-    testEnemy.getSpriteVectors()[1] = sf::Vector2i{ 300u, 0u };
-    testEnemy.getSpriteVectors()[2] = sf::Vector2i{ 940u, 0u };
-    testEnemy.getSpriteVectors()[3] = sf::Vector2i{ 1230u, 0u };
+    for (auto& flyingEnemy : flyingEnemies)
+    {
+        flyingEnemy.getSpriteVectors()[0] = sf::Vector2i{ 0u, 0u };
+        flyingEnemy.getSpriteVectors()[1] = sf::Vector2i{ 300u, 0u };
+        flyingEnemy.getSpriteVectors()[2] = sf::Vector2i{ 940u, 0u };
+        flyingEnemy.getSpriteVectors()[3] = sf::Vector2i{ 1230u, 0u };
+    }
+    
 
-    testEnemy2.getSpriteVectors()[0] = sf::Vector2i{ 0u, 0u };
-    testEnemy2.getSpriteVectors()[1] = sf::Vector2i{ 900u, 0u };
-    testEnemy2.getSpriteVectors()[2] = sf::Vector2i{ 1425u, 0u };
-    testEnemy2.getSpriteVectors()[3] = sf::Vector2i{ 2300u, 0u };
+    for (auto& groundEnemy : groundEnemies)
+    {
+        groundEnemy.getSpriteVectors()[0] = sf::Vector2i{ 0u, 0u };
+        groundEnemy.getSpriteVectors()[1] = sf::Vector2i{ 900u, 0u };
+        groundEnemy.getSpriteVectors()[2] = sf::Vector2i{ 1425u, 0u };
+        groundEnemy.getSpriteVectors()[3] = sf::Vector2i{ 2300u, 0u };
+    }
+    
 
     while (window.isOpen())
     {
@@ -179,8 +188,16 @@ int main()
             groundEnemy.update();
         }
       
-        animationManager.animate(testEnemy, testEnemy.getDirection(), deltaTime);
-        animationManager.animate(testEnemy2, testEnemy2.getDirection(), deltaTime);
+        for (auto& flyingEnemy : flyingEnemies)
+        {
+            animationManager.animate(flyingEnemy, flyingEnemy.getDirection(), deltaTime);
+
+        }
+        for (auto& groundEnemy : groundEnemies)
+        {
+            animationManager.animate(groundEnemy, groundEnemy.getDirection(), deltaTime);
+
+        }
       
         for (auto& flyingEnemy : flyingEnemies)
         {
