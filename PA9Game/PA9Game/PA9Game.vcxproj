@@ -161,6 +161,7 @@
   <ItemGroup>
     <Image Include="Backdrop.png" />
     <Image Include="Backdrop1.png" />
+    <Image Include="platform.png" />
     <Image Include="Sprite.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

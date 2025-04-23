@@ -16,6 +16,7 @@ int main()
 
     sf::RenderWindow window(sf::VideoMode({ 1536u, 1024u }), "SFML works!");
 
+    const std::string platformImg = "platform.png";
     const std::string character = "Sprite.png";
     const std::string character2 = "Lebron.png";
     Backdrop backdrop("Backdrop1.png", "Ground.png");
@@ -28,13 +29,13 @@ int main()
    
 
     std::vector<GameObject> platforms;
-    platforms.emplace_back(sf::Vector2f(1000, 40), sf::Vector2f(0, 760), sf::Color::Green);
-    platforms.emplace_back(sf::Vector2f(120, 50), sf::Vector2f(300, 520), sf::Color::Green);
+    platforms.emplace_back(sf::Vector2f(10000, 400), sf::Vector2f(0, 760), platformImg);
+    platforms.emplace_back(sf::Vector2f(120, 50), sf::Vector2f(300, 520), platformImg);
 
     std::vector<GameObject> sideColPlatforms;
-    sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 525), sf::Color::Red);
-    sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(-1, 0), sf::Color::Green);
-    sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(1000, 0), sf::Color::Green);
+    sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 525), platformImg);
+    sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(-1, 0), platformImg);
+    sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(1000, 0), platformImg);
     Player player(character, 250, 250);
 
     // checks if jump was initiated previously

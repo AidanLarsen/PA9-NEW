@@ -6,22 +6,22 @@ C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA
       C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(36,48): warning C4305: 'argument': truncation from 'double' to 'T'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(36,48): warning C4305:         with
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(36,48): warning C4305:         [
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(36,48): warning C4305:             T=float
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(36,48): warning C4305:         ]
 C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(37,48): warning C4305: 'argument': truncation from 'double' to 'T'
 C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(37,48): warning C4305:         with
 C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(37,48): warning C4305:         [
 C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(37,48): warning C4305:             T=float
 C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(37,48): warning C4305:         ]
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(129,30): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(129,25): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(141,38): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(141,34): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(152,39): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(152,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(38,48): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(38,48): warning C4305:         with
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(38,48): warning C4305:         [
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(38,48): warning C4305:             T=float
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(38,48): warning C4305:         ]
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(130,30): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(130,25): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(142,38): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(142,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(153,39): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(153,34): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103): warning C4244:         with
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103): warning C4244:         [
@@ -30,9 +30,9 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.3480
   (compiling source file 'main.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(732,103):
       the template instantiation context (the oldest one first) is
-          C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(24,19):
+          C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(25,19):
           see reference to function template instantiation 'GroundEnemy &std::vector<GroundEnemy,std::allocator<GroundEnemy>>::emplace_back<const std::string&,int,int,int>(const std::string &,int &&,int &&,int &&)' being compiled
-              C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(24,31):
+              C:\Users\aplar\OneDrive - Washington State University (email.wsu.edu)\Desktop\PA9-NEW\PA9Game\PA9Game\main.cpp(25,31):
               see the first reference to 'std::vector<GroundEnemy,std::allocator<GroundEnemy>>::emplace_back' in 'main'
           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector(909,24):
           see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<const std::string&,int,int,int>(const std::string &,int &&,int &&,int &&)' being compiled
