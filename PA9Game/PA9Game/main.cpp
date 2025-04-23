@@ -10,18 +10,21 @@
 
 int main()
 {
+    sf::Vector2i stanced = {0u, 0u};
+    
+
 
     float initial = 0.0f;
-
+    sf::Clock deltaClock;
     sf::RenderWindow window(sf::VideoMode({ 1536u, 1024u }), "SFML works!");
 
     const std::string character = "Sprite.png";
     const std::string character2 = "Lebron.png";
     Backdrop backdrop("Backdrop1.png", "Ground.png");
 
-    GroundEnemy testEnemy(character, 100, 100, 500);
+    GroundEnemy testEnemy(character, 100, 100, 500, 0, 0, 400, 400);
 
-    FlyingEnemy testEnemy2(character2, 500, 500, 500);
+    FlyingEnemy testEnemy2(character2, 500, 500, 500, 0, 0, 400, 400);
 
     std::vector<GameObject> platforms;
     platforms.emplace_back(sf::Vector2f(1000, 40), sf::Vector2f(0, 760), sf::Color::Green);
@@ -31,14 +34,15 @@ int main()
     sideColPlatforms.emplace_back(sf::Vector2f(120, 45), sf::Vector2f(300, 525), sf::Color::Red);
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(-1, 0), sf::Color::Green);
     sideColPlatforms.emplace_back(sf::Vector2f(.1, 800), sf::Vector2f(1000, 0), sf::Color::Green);
-    Player player(character, 250, 250);
-
+    Player player(character, 250, 250, 0, 0, 273, 409);
+    Animation animationManager;
     // checks if jump was initiated previously
     bool prevJump = false;
-
+    bool allowedToJump = false;
 
     while (window.isOpen())
     {
+        allowedToJump = false;
         while (const std::optional event = window.pollEvent())
         {
             if (event->is<sf::Event::Closed>())
@@ -56,6 +60,7 @@ int main()
 
         if (jumpNow && !prevJump && !player.isJumping())
         {
+            animationManager.animate(player, Direction::Up, deltaClock);
             player.setJumping(true);
             // we can mess with setting the velocity depending on how high we want to jump
             player.setVelocityY(-30.0f);
@@ -68,7 +73,6 @@ int main()
         if (player.isJumping())
         {
             player.jump();
-
         }
 
 
@@ -91,6 +95,7 @@ int main()
         // left movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
         {
+            animationManager.animate(player, Direction::Right, deltaClock);
             player.moveRight();
             player.checkRightCol(sideColPlatforms);
         }
@@ -100,6 +105,7 @@ int main()
         // right movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
         {
+            animationManager.animate(player, Direction::Left, deltaClock);
             player.moveLeft();
             player.checkLeftCol(sideColPlatforms);
 
@@ -134,6 +140,7 @@ int main()
         testEnemy.drawEntity(window);
 
         testEnemy2.drawEntity(window);
+        
         player.drawEntity(window);
         window.display();
 
