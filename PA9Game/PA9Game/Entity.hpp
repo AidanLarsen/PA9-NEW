@@ -7,11 +7,12 @@ class Entity {
 public:
 
 	Entity() = default;
-	explicit Entity(const std::string imgDirectory, float x, float y);
+	explicit Entity(const std::string imgDirectory, float x, float y, unsigned rectX, unsigned rectY, unsigned width, unsigned height);
 	void drawEntity(sf::RenderWindow& window);
 	void setPosition(float x, float y);
 	void setScale(float x, float y);
 
+	void setRect(unsigned rectX, unsigned rectY, unsigned width, unsigned height);
 	sf::IntRect* getRect(); // animation stuff
 	sf::Sprite* getSprite();
 	void updateSprite(); // animation stuff
