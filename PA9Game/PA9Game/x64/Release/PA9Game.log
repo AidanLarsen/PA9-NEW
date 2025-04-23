@@ -1,15 +1,7 @@
-﻿  Animation.cpp
-C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Animation.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-  Generating code
-  2 of 370 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+﻿  Generating code
+  6 of 370 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    7 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   PA9Game.vcxproj -> C:\Users\troym\Desktop\temp\PA9-NEW\PA9Game\x64\Release\PA9Game.exe
   'pwsh.exe' is not recognized as an internal or external command,

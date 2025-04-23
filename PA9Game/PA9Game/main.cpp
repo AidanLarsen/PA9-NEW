@@ -22,9 +22,9 @@ int main()
     const std::string character2 = "Lebron.png";
     Backdrop backdrop("Backdrop1.png", "Ground.png");
 
-    GroundEnemy testEnemy(character, 100, 100, 500, 0, 0, 400, 400);
+    GroundEnemy testEnemy(character, 100, 100, 500, 0, 0, 273, 409);
 
-    FlyingEnemy testEnemy2(character2, 500, 500, 500, 0, 0, 400, 400);
+    FlyingEnemy testEnemy2(character2, 500, 500, 500, 0, 0, 273, 409);
 
     std::vector<GameObject> platforms;
     platforms.emplace_back(sf::Vector2f(1000, 40), sf::Vector2f(0, 760), sf::Color::Green);
