@@ -63,3 +63,8 @@ void Entity::updateSprite()
 {
 	pSprite.emplace(pTexture, rect);
 }
+
+sf::Vector2i* Entity::getSpriteVectors()
+{
+	return spriteVectors;
+}

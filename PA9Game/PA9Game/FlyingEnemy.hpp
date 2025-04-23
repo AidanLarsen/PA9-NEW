@@ -1,7 +1,9 @@
+#pragma once
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Entity.hpp"
 #include <utility>
+#include "Animation.hpp"
 
 class FlyingEnemy : public Entity {
 public:
@@ -18,7 +20,15 @@ public:
 	}
 
 	void update();
-
+	Direction getDirection() const
+	{
+		if (velocity.x > 0)
+			return Direction::Right;
+		else if (velocity.x < 0)
+			return Direction::Left;
+		else
+			return Direction::Up;
+	}
 private:
 
 	sf::Vector2f velocity;

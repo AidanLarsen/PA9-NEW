@@ -18,11 +18,12 @@ public:
 	sf::IntRect* getRect(); // animation stuff
 	sf::Sprite* getSprite();
 	void updateSprite(); // animation stuff
+	sf::Vector2i* getSpriteVectors();
 protected:
 
 	sf::Texture pTexture;
 	std::optional<sf::Sprite> pSprite;
 	sf::IntRect rect = sf::IntRect({ 0,0 },{1000, 1000});
 	std::pair<float, float> startingPoint; //variable to hold the starting position
-
+	sf::Vector2i spriteVectors[4];
 };
