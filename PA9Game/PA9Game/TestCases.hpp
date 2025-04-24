@@ -28,14 +28,15 @@ bool gameLoopTest()
 bool testCreateCharacter()
 {
 	sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "Character Creation Test");
-	// Load texture
-	sf::Texture playerTex;
-	if (!playerTex.loadFromFile("Sprite.png"))
+	sf::Texture playerTexture;
+	if (!playerTexture.loadFromFile("Sprite.png"))
 	{
 		std::cout << "Failed to load player texture!" << std::endl;
 		return false;
 	}
-	Player player(playerTex, 100, 500, 0, 0, 273, 409);
+	std::cout << "Player texture loaded successfully!" << std::endl;
+
+	Player player(playerTexture, 100, 500, 0, 0, 273, 409);
 	std::cout << "Player created successfully!" << std::endl;
 
 	player.setScale(0.2f, 0.2f);
@@ -68,11 +69,14 @@ bool testAnimate()
     sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "Animation test");
 
     // Load texture for enemy
-    sf::Texture groundEnemyTex;
-    if (!groundEnemyTex.loadFromFile("GroundEnemy.png"))
+    sf::Texture groundEnemyTexture;
+    if (!groundEnemyTexture.loadFromFile("GroundEnemy.png"))
+    {
+		std::cout << "Failed to load ground enemy texture!" << std::endl;
         return false;
+    }
 
-    GroundEnemy groundEnemy(groundEnemyTex, 200, 455, 400, 0, 0, 330, 460);
+    GroundEnemy groundEnemy(groundEnemyTexture, 200, 455, 400, 0, 0, 330, 460);
 
     groundEnemy.getSpriteVectors()[0] = sf::Vector2i{ 0u, 0u };
     groundEnemy.getSpriteVectors()[1] = sf::Vector2i{ 300u, 0u };
@@ -110,14 +114,14 @@ bool testPlayerMovement()
 
     sf::Clock deltaClock;
 
-    sf::Texture playerTex;
-    if (!playerTex.loadFromFile("Sprite.png"))
+    sf::Texture playerTexture;
+    if (!playerTexture.loadFromFile("Sprite.png"))
     {
         std::cout << "Failed to load player texture!" << std::endl;
         return false;
     }
 
-    Player player(playerTex, 100, 500, 0, 0, 273, 409);
+    Player player(playerTexture, 100, 500, 0, 0, 273, 409);
     player.setScale(0.2f, 0.2f);
 
     player.getSpriteVectors()[0] = sf::Vector2i{ 0u, 0u };
@@ -149,13 +153,12 @@ bool testPlayerMovement()
             player.checkGravity(platforms);
         }
 
-        // Jump logic
         bool jumpNow = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space);
         if (jumpNow && !prevJump && player.isGrounded(platforms))
         {
 			std::cout << "Entering jump logic\n";
             player.setJumping(true);
-            player.setVelocityY(-10.0f); // Jump height
+            player.setVelocityY(-10.0f);
             jumpStartY = player.getPositionY();
         }
         prevJump = jumpNow;
@@ -165,7 +168,6 @@ bool testPlayerMovement()
 			std::cout << "Jumping\n";
             player.jump();
 
-            // Limit jump height
             if (player.getPositionY() <= jumpStartY - 200.0f || player.getVelocityY() >= 0)
             {
                 player.setVelocityY(0.0f);
@@ -219,7 +221,6 @@ bool testCollision()
     player.getSpriteVectors()[2] = sf::Vector2i{ 1380u, 0u };
     player.getSpriteVectors()[3] = sf::Vector2i{ 860u, 0u };
 
-    // Floating platform
     std::vector<GameObject> platforms;
     platforms.emplace_back(sf::Vector2f(200, 30), sf::Vector2f(300, 400), sf::Color::Blue);
     platforms.emplace_back(sf::Vector2f(800, 40), sf::Vector2f(0, 560), sf::Color::Green);

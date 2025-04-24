@@ -1,3 +1,22 @@
+/*
+ PA 9: An honest attempt at a platformer
+ Description: This is our attempt at a platformer style game.
+ It has parkour elements, enemies to avoid, and an end goal flag to reach.
+ We ran into some issues with physics, but with more time we could 
+ definitely create a much more polished product. Inheritance was used
+ in the entity, player, and enemy classes.
+
+ Project started: 4/14/2024
+ Project Finished: 4/23/2024
+ Authors:
+   - Troy Muehlbauer
+   - Aidan Larsen
+   - Jeremy
+ Professor: Andy O'Fallon
+ Course: CptS 122
+ */
+
+
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Object.hpp"
