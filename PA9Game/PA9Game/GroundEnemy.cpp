@@ -1,5 +1,7 @@
 #include "GroundEnemy.hpp"
 
+
+// updates the position of the enemy
 void GroundEnemy::update() {
 
     if (!pSprite.has_value()) {

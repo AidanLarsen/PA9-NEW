@@ -11,7 +11,7 @@
  Authors:
    - Troy Muehlbauer
    - Aidan Larsen
-   - Jeremy
+   - Jeremy Castro
  Professor: Andy O'Fallon
  Course: CptS 122
  */

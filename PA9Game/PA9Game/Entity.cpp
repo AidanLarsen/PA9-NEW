@@ -4,10 +4,6 @@ Entity::Entity(const sf::Texture& texture, float x, float y,
 	unsigned rectX, unsigned rectY, unsigned width, unsigned height) {
 	
 	pTexture = &texture;
-	/*if (!pTexture.loadFromFile(imgDirectory)) {
-		std::cerr << "Error\nCould not load image from directory.\n";
-		return;
-	}*/
 
 	setRect(rectX, rectY, width, height);
 	pSprite.emplace(*pTexture, rect);
@@ -24,6 +20,7 @@ void Entity::drawEntity(sf::RenderWindow& window)
 	}
 }
 
+// getters and setters for the entity class, 
 void Entity::setPosition(float x, float y)
 {
 	if (pSprite) {
@@ -49,6 +46,7 @@ void Entity::setRect(unsigned rectX, unsigned rectY, unsigned width, unsigned he
 	this->rect.position.x = rectX;
 	this->rect.position.y = rectY;
 }
+
 
 sf::IntRect* Entity::getRect()
 {
