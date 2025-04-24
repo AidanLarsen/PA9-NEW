@@ -19,6 +19,7 @@
     <ClInclude Include="Prop.hpp" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="flag.hpp" />
+    <ClInclude Include="TestCases.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Backdrop.png" />

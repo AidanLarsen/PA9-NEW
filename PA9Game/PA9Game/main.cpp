@@ -9,10 +9,11 @@
 #include "FlyingEnemy.hpp"
 #include "flag.hpp"
 #include <vector>
-
+#include "TestCases.hpp"
 
 int main()
 {
+
     sf::View view;
     view.setSize({ 600, 600 });
     sf::Vector2i stanced = { 0u, 0u };
