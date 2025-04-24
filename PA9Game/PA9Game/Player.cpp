@@ -1,5 +1,7 @@
 #include "Player.hpp"
 
+
+// both of these check for collisions with enemies
 void Player::collidedWithFlyingEnemy(std::vector<FlyingEnemy>& enemies)
 {
 	for (const auto& enemy : enemies)
@@ -30,6 +32,7 @@ void Player::collidedWithGroundEnemy(std::vector<GroundEnemy>& enemies)
 	return;
 }
 
+//checks if the player ran into the platforms and applies collision
 void Player::checkLeftCol(std::vector<GameObject> objects)
 {
 	for (const auto& object : objects)
@@ -65,6 +68,7 @@ bool Player::checkTopCol(std::vector<GameObject> objects)
 	return collided;
 }
 
+//checks and applies gravity
 void Player::checkGravity(std::vector<GameObject> objects)
 {
 	
@@ -81,11 +85,12 @@ void Player::checkGravity(std::vector<GameObject> objects)
 
 	if (!onGround)
 	{
-		pSprite->move({ 0, 0.25f }); // Apply gravity
+		pSprite->move({ 0, 0.25f }); 
 	}
 	
 }
 
+// player movement
 void Player::moveRight()
 {
 	pSprite->move({ 0.2, 0 });
@@ -102,9 +107,9 @@ void Player::moveDown()
 }
 
 
-
+// is the player jump, continuously appling a change to the velocity
 void Player::jump()
 {
 	pSprite->move({ 0, velocityY });
-	velocityY += .15;
+	velocityY += .5;
 }

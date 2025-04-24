@@ -73,7 +73,7 @@ public:
 			pSprite->setPosition(initVec);
 		}
 	}
-	//void jump();
+	
 
 	int getHealth() const {
 		return health;

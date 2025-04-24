@@ -1,6 +1,6 @@
 #include "FlyingEnemy.hpp"
 
-
+// updates the position of the enemy
 void FlyingEnemy::update() {
     if (!pSprite.has_value()) {
         return;
