@@ -111,5 +111,5 @@ void Player::moveDown()
 void Player::jump()
 {
 	pSprite->move({ 0, velocityY });
-	velocityY += .5;
+	velocityY += .15;
 }

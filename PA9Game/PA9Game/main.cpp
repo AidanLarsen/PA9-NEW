@@ -229,6 +229,7 @@ int main()
             player.setJumping(false);
         }
 
+        // this here is for drawing and applying sprites to all the entitys as well as setting their scale
         window.clear();
         backdrop.drawBackdrop(window);
         player.setScale(0.2, 0.2);
