@@ -4,6 +4,12 @@
 #include "Entity.hpp"
 #include <map>
 
+/*
+The animation class handles all the animation side stuff.
+The general idea is to use a spritesheet, and have an intRect capture different positions within that spritesheet
+in order to update the sprite's texture to have an animated effect.
+*/
+
 enum class Direction { Up, Down, Left, Right };
 
 
@@ -14,10 +20,3 @@ public:
 	void animate(Entity& entity, Direction direction, sf::Time& deltaTime);
 	std::map<Entity*, float> animationTimers;
 };
-
-//class EntityPosition
-//{
-//public:
-//	sf::Vector2i playerInitialLeft = { 1380u, 0u };
-//	sf::Vector2i playerEndLeft = { 860u, 0u };
-//};
